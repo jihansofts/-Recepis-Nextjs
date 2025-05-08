@@ -5,3 +5,5 @@ export interface Recipe {
   slug: string;
   imageUrl?: string;
 }
+
+

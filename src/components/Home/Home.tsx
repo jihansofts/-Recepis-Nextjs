@@ -2,7 +2,8 @@ import React from "react";
 import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import Image from "next/image";
-export default function Home() {
+import Navbar from "@/common/Navbar";
+export default function HomeHero() {
   return (
     <section className="relative w-full min-h-screen py-14">
       <div className="absolute inset-0 z-[-1]">
@@ -16,16 +17,7 @@ export default function Home() {
           sizes="100vw"
         />
       </div>
-      <div className="container z-100 mx-auto text-center">
-        <div className="space-x-12 ">
-          <a className=" font-alt text-[16px] font-bold text-secondary" href="">
-            Home
-          </a>
-          <a className="text-[#4A4E49] font-alt text-[16px] " href="">
-            Recipes
-          </a>
-        </div>
-      </div>
+      <Navbar />
       <div className="container z-100  gap-x-12 mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1">
         <div className="col-span-1 md:px-5 sm:px-10 ">
           <div className="mt-14 border-5 z-10 border-secondary p-2 rounded-full">
@@ -38,9 +30,9 @@ export default function Home() {
           </div>
         </div>
         <div className="col-span-1 md:px-5 sm:px-10 flex flex-col items-center justify-center">
-          <div className="mt-16">
-            <h1 className="text-[56px] font-alt font-extrabold text-textHeading">
-              Stay Gluten Free <br /> With Natalie
+          <div className="mt-16 px-4">
+            <h1 className="text-[56px] lg:text-[56px] md:text-[45px] sm:text-[40px] font-alt font-extrabold text-textHeading">
+              Stay Gluten Free <br className="hidden md:block" /> With Natalie
             </h1>
             <p className="text-[16px] text-textHeading font-sans font-normal mt-4">
               A gluten-free diet is beneficial for individuals with gluten

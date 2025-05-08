@@ -1,7 +1,8 @@
 // pages/recipes/index.tsx
 import React from "react";
-import RecipeCard from "../common/RecipeCard";
-import { Recipe } from "../types/recipe";
+
+import RecipeCard from "../../common/RecipeCard";
+import { Recipe } from "../../types/recipe";
 
 const recipes: Recipe[] = [
   {

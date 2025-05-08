@@ -1,5 +1,6 @@
-import Link from "next/link";
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { Recipe } from "../types/recipe";
 
 interface RecipeCardProps {
@@ -8,6 +9,10 @@ interface RecipeCardProps {
 }
 
 export default function RecipeCard({ recipe, imagePosition }: RecipeCardProps) {
+  const router = useRouter();
+  const HandleRouting = (path: string) => {
+    router.push(path);
+  };
   return (
     <div
       className={`flex flex-col lg:flex-row gap-6 mb-12 p-6 rounded-lg  bg-white ${
@@ -26,11 +31,11 @@ export default function RecipeCard({ recipe, imagePosition }: RecipeCardProps) {
         <p className="text-[16px] text-textColor font-sans mb-6 text-sm/7">
           {recipe.description}
         </p>
-        <Link
-          href={`/recipes/${recipe.slug}`}
-          className="inline-bloc bg-button text-white font-medium py-2 px-6 rounded-md transition-colors duration-300">
+        <button
+          onClick={() => HandleRouting(`/recipes-details-${recipe.id}`)}
+          className="inline-bloc cursor-pointer bg-button text-white font-medium py-2 px-6 rounded-md transition-colors duration-300">
           Check Full Recipe →
-        </Link>
+        </button>
       </div>
 
       {/* Image */}
