@@ -41,7 +41,7 @@ export default function RecipeDetails({
           </div>
 
           {/* Right: Text Content */}
-          <div className="w-full md:w-1/2 text-gray-800">
+          <div className="w-full flex flex-col items-start justify-center md:w-1/2 text-gray-800">
             <h1 className="text-2xl md:text-4xl font-bold mb-6 text-black">
               {title}
             </h1>
